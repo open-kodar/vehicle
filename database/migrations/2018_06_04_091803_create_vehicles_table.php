@@ -15,6 +15,22 @@ class CreateVehiclesTable extends Migration
     {
         Schema::create('vehicles', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->integer('engine_cc');
+            $table->string('color');
+            $table->string('model');
+            $table->string('transmission');
+            $table->boolean('condition');
+            $table->integer('running')->default(0);
+            $table->string('location');
+            $table->integer('price')->default(0);
+            $table->string('description');
+            $table->string('contact');
+            $table->boolean('sale_status')->default(0);
+            
+            $table->integer('user_id')->unsigned();
+            $table->integer('car_type')->unsigned();
+
             $table->timestamps();
         });
     }

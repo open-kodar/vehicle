@@ -15,9 +15,17 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/post-ad', function () {
-    return view('post-ad');
+Route::get('/post-ad', 'AdController@index');
+Route::post('/post-ad', 'AdController@postAd');
+
+Route::get('/used-car', function () {
+    return view('used');
 });
+
+Route::get('/new-car', function () {
+    return view('new');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

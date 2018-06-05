@@ -1,35 +1,8 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="searchwrap">
-  <div class="container">
-    <h3>Find All Kinds of Vehicle in Bangladesh</h3>
 
-    <div class="searchbar">
-      <div class="row">
-        <div class="col-md-8">
-          <input type="text" class="form-control" placeholder="Car Make or Model" />
-        </div>
-      
-        <!-- <div class="col-md-3">
-          <select class="form-control">
-            <option>City</option>
-            <option>New York</option>
-            <option>San Joes</option>
-            <option>Atlanta</option>
-            <option>Kennesaw</option>
-            <option>Merry Land</option>
-            <option>Star City</option>
-          </select>
-        </div> -->
-        <div class="col-md-4">
-          <input type="submit" class="btn" value="Search">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Search End --> 
+
 <div class="container">
 <div class="row">
   <div class="col-md-3 col-sm-5"> 
@@ -41,8 +14,8 @@
       <div class="widget">
         <h4 class="widget-title">Car Type</h4>
         <select class="form-control">
-          <option>New</option>
-          <option>Used Car</option>
+          <option>Truck</option>
+          <option>Bus</option>
         </select>
       </div>
       <!-- type end --> 
@@ -50,13 +23,13 @@
 
       
       <!-- type -->
-      <div class="widget">
+      <!-- <div class="widget">
         <h4 class="widget-title">Condition</h4>
         <select class="form-control">
           <option>New</option>
           <option>Used Car</option>
         </select>
-      </div>
+      </div> -->
       <!-- type end --> 
 
       <!-- Engine -->
@@ -240,41 +213,6 @@
   </div>
 </div> -->
 <!-- Cars By Cities ends --> 
-
-
-
-<!-- How it Works start -->
-<div class="section whitebg howitwrap">
-  <div class="container">
-    <ul class="howlist row">
-      <!--step 1-->
-      <li class="col-md-4 col-sm-4">
-        <div class="iconcircle"><img src="images/avatar.png" alt="" /></div>
-        <h4>Create a Free Account</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et dolore magna aliqua.</p>
-      </li>
-      <!--step 1 end--> 
-      
-      <!--step 2-->
-      <li class="col-md-4 col-sm-4">
-        <div class="iconcircle"><img src="images/car.png" alt="" /></div>
-        <h4>Post your Free Car</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et dolore magna aliqua.</p>
-      </li>
-      <!--step 2 end--> 
-      
-      <!--step 3-->
-      <li class="col-md-4 col-sm-4">
-        <div class="iconcircle"><img src="images/sell-icon.png" alt="" /></div>
-        <h4>Sold or Buy</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et dolore magna aliqua.</p>
-      </li>
-      <!--step 3 end-->
-    </ul>
-  </div>
-</div>
-<!-- How it Works Ends --> 
-
 
 <!--Footer-->
 <div class="subscribe">

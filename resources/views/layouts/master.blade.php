@@ -45,8 +45,8 @@
           <div class="navbar-collapse collapse" id="nav-main">
             <ul class="nav navbar-nav">
               
-                <li><a href="listing.html">Used Cars</a></li>
-                <li><a href="listing.html">New Cars</a></li>
+                <li><a href="{{ url('/used-car')}}">Used Vehicles</a></li>
+                <li><a href="{{ url('/new-car')}}">New Vehicles</a></li>
                 <li class="active"><a href="{{ url('/post-ad') }}">Post an Ad</a></li>
 
             </ul>
@@ -64,6 +64,9 @@
 
                                 <ul class="dropdown-menu">
                                     <li>
+                                        <a href="#">
+                                            My ads
+                                        </a>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -97,7 +100,7 @@
 <!--Copyright-->
 <div class="copyright">
   <div class="container">
-    <div class="bttxt">Copyright &copy; 2017 garialvai.com. All Rights Reserved.</div>
+    <div class="bttxt">Garialvai.com.bd. All Rights Reserved.</div>
   </div>
 </div>
 

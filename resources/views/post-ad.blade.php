@@ -8,10 +8,10 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-sm-6">
-        <h1 class="page-heading">Post A Car</h1>
+        <h1 class="page-heading">Post A Vehicle</h1>
       </div>
       <div class="col-md-6 col-sm-6">
-        <div class="breadCrumb"><a href="#.">Home</a> / <span>Post Job</span></div>
+        <div class="breadCrumb"><a href="{{ url('/') }}">Home</a> / <span>Post ad</span></div>
       </div>
     </div>
   </div>
@@ -24,9 +24,12 @@
       <div class="col-md-12">
         <div class="userccount">
           <div class="formpanel"> 
-            
+            <form action="{{ url('/post-ad') }}" method="post" >
+            {{ csrf_field() }}
+
             <!-- Ad Information -->
-            <h5>Car Information</h5>
+            <h5>Vehicle Information</h5>
+            <input type="hidden" name="user_id" value="{{ Auth::id() }}">
             <div class="row">
               <div class="col-md-12">
                 <div class="formrow">
@@ -125,41 +128,16 @@
                 </div>
               </div>
               
-<!--               
-              <div class="col-md-12">
-                <div class="formrow">
-                	<ul class="row featchoose">
-                    	<li class="col-md-4"><input type="checkbox" name=""> ABS</li>
-                        <li class="col-md-4"><input type="checkbox" name=""> AM/FM Radio</li>
-                        <li class="col-md-4"><input type="checkbox" name=""> Air Bags</li>
-                        <li class="col-md-4"><input type="checkbox" name=""> Air Conditioning</li>
-                        <li class="col-md-4"><input type="checkbox" name=""> Alloy Rims</li>
-                        <li class="col-md-4"><input type="checkbox" name=""> CD Player</li>
-                        <li class="col-md-4"><input type="checkbox" name=""> Cassette Player</li>
-                        <li class="col-md-4"><input type="checkbox" name=""> Cruise Control</li>
-                        <li class="col-md-4"><input type="checkbox" name=""> DVD Player</li>
-                        <li class="col-md-4"><input type="checkbox" name=""> Immobilizer Key</li>
-                        <li class="col-md-4"><input type="checkbox" name=""> Keyless Entry</li>
-                        <li class="col-md-4"><input type="checkbox" name=""> Power Locks</li>
-                        <li class="col-md-4"><input type="checkbox" name=""> Power Mirrors</li>
-                        <li class="col-md-4"><input type="checkbox" name=""> Power Steering</li>
-                        <li class="col-md-4"><input type="checkbox" name=""> Power Windows</li>
-                    </ul>
-                </div>
-              </div>
-               -->
-              
-              
               <div class="col-md-12">
                 <div class="formrow">
                   <div class="uploadphotobx"> <i class="fa fa-upload" aria-hidden="true"></i>
-                    <h4>Upload your photo</h4>
-                    <p>It must be a head-shot photo</p>
+                    <h4>Upload your vehicle photo</h4>
+                    <p>It must be a clear photo</p>
                     <label class="uploadBox">Click here to Upload
                       <input type="file" name="upload">
                     </label>
                   </div>
-                  <div class="fileattached"> <img src="images/ads/01.html" alt=""> <span>file-name-here.jpg</span> <i class="fa fa-check-circle" aria-hidden="true"></i>
+                  <div class="fileattached"> <img src="#" alt=""> <span>file-name-here.jpg</span> <i class="fa fa-check-circle" aria-hidden="true"></i>
                     <div class="clearfix"></div>
                   </div>
                  
@@ -175,6 +153,7 @@
             </div>
             <br>
             <input type="submit" class="btn" value="Post An Ad">
+            </form>
           </div>
         </div>
       </div>
