@@ -22,6 +22,14 @@ Route::get('/used-car', function () {
     return view('used');
 });
 
+Route::get('/details', function () {
+    return view('details');
+});
+
+Route::get('/my-ads', function () {
+    return view('myads');
+});
+
 Route::get('/new-car', function () {
     return view('new');
 });

@@ -64,9 +64,7 @@
 
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="#">
-                                            My ads
-                                        </a>
+                                        <a href="{{ url('/my-ads') }}">My ads </a>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -110,6 +108,9 @@
 
 <!-- Owl carousel --> 
 <script src="js/owl.carousel.js"></script> 
+
+<!-- Flex slider --> 
+<script src="js/jquery.flexslider.js"></script> 
 
 <!-- Custom js --> 
 <script src="js/script.js"></script>

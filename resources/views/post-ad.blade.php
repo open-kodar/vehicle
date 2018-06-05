@@ -17,6 +17,11 @@
   </div>
 </div>
 <!-- Page Title End -->
+@if (session('status'))
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
+@endif
 
 <div class="listpgWraper">
   <div class="container">
@@ -33,7 +38,7 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="formrow">
-                  <input type="text" name="jobtitle" class="form-control" placeholder="Car Name" required>
+                  <input type="text" name="name" class="form-control" placeholder="Car Name" required>
                 </div>
               </div>
               
@@ -88,7 +93,7 @@
               </div>
               <div class="col-md-4">
                 <div class="formrow">
-                  <select class="form-control" name="msalary">
+                  <select class="form-control" name="color">
                     <option>Color</option>
                     <option>White</option>
                     <option>Black</option>
@@ -118,7 +123,7 @@
 
               <div class="col-md-4">
                 <div class="formrow">
-                  <input type="text" name="jobtitle" class="form-control" placeholder="Ad Price">
+                  <input type="text" name="price" class="form-control" placeholder="Ad Price">
                 </div>
               </div>
 
