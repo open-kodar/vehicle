@@ -4,11 +4,26 @@
 
 
 <div class="container">
+
+<!-- Page Title start -->
+<div class="pageTitle">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <h1 class="page-heading">Used Vehicles</h1>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div class="breadCrumb"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Page Title End -->
+
 <div class="row">
   <div class="col-md-3 col-sm-5"> 
     <!-- Side Bar start -->
     <div class="sidebar"> 
-     
       
       <!-- type -->
       <div class="widget">
@@ -63,7 +78,7 @@
       <li>
         <div class="row">
           <div class="col-md-3 col-sm-4">
-            <div class="adimg"><img src="images/cars/04.jpg" alt="Ad Name"></div>
+            <div class="adimg"><img src="images/no_image.png" alt="Ad Name"></div>
           </div>
           <div class="col-md-9 col-sm-8">
             <div class="jobinfo">
@@ -95,39 +110,7 @@
       <li>
         <div class="row">
           <div class="col-md-3 col-sm-4">
-            <div class="adimg"><img src="images/cars/05.jpg" alt="Ad Name"></div>
-          </div>
-          <div class="col-md-9 col-sm-8">
-            <div class="jobinfo">
-              <div class="row">
-                <div class="col-md-8 col-sm-7">
-                  <h3><a href="#.">Sue gate F 1.0 for Sale</a></h3>
-                  <div class="location"><i class="fa fa-calendar" aria-hidden="true"></i> <span>2014</span></div>
-                  <div class="location"><i class="fa fa-tachometer" aria-hidden="true"></i> <span>38,000 km</span></div>
-                  <div class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> <span>New York</span></div>
-                  <div class="clearfix"></div>
-                  <div class="vinfo"><span>Petrol</span></div>
-                  <div class="vinfo"><span>1300 cc</span></div>
-                  <div class="vinfo"><span>Automatic</span></div>
-                  <div class="clearfix"></div>
-                  <div class="date">Last Updated: 1 day ago</div>
-                </div>
-                <div class="col-md-4 col-sm-5 text-right">
-                  <div class="adprice">$456.00</div>
-                  <div class="listbtn"><a href="detail.html">View Details <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <!-- ad end --> 
-      
-      <!-- ad start -->
-      <li>
-        <div class="row">
-          <div class="col-md-3 col-sm-4">
-            <div class="adimg"><img src="images/cars/06.jpg" alt="Ad Name"></div>
+            <div class="adimg"><img src="images/no_image.png" alt="Ad Name"></div>
           </div>
           <div class="col-md-9 col-sm-8">
             <div class="jobinfo">
