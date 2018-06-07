@@ -7,8 +7,9 @@
 
     <div class="searchbar">
       <div class="row">
+      <form method="get" action="{{ url('/find') }}">
         <div class="col-md-8">
-          <input type="text" class="form-control" placeholder="Search" />
+          <input type="text" name="query" class="form-control" placeholder="Search" />
         </div>
       
         <!-- <div class="col-md-3">
@@ -23,17 +24,22 @@
           </select>
         </div> -->
         <div class="col-md-4">
-          <input type="submit" class="btn" value="Search">
+          <input type="submit" class="btn" value="Search"> 
         </div>
+        </form>
       </div>
     </div>
   </div>
 </div>
-<!-- Search End --> 
+<!-- Search End -->
+
+
 <div class="container">
 <div class="row">
   <div class="col-md-3 col-sm-5"> 
     <!-- Side Bar start -->
+
+    <form method="get" action="{{ url('/filter')}}">
     <div class="sidebar"> 
      
         @php
@@ -42,9 +48,9 @@
       <!-- type -->
       <div class="widget">
         <h4 class="widget-title">Car Type</h4>
-        <select class="form-control">
+        <select class="form-control" name="type">
         @foreach ($types as $type)
-          <option>{{ $type->name }}</option>
+          <option value="{{ $type->id }}">{{ $type->name }}</option>
         @endforeach
         </select>
       </div>
@@ -55,9 +61,9 @@
       <!-- type -->
       <div class="widget">
         <h4 class="widget-title">Condition</h4>
-        <select class="form-control">
-          <option>New</option>
-          <option>Used Car</option>
+        <select class="form-control" name="condition">
+          <option value="1">New</option>
+          <option value="0">Used Car</option>
         </select>
       </div>
       <!-- type end --> 
@@ -67,9 +73,9 @@
 
       <div class="widget">
         <h4 class="widget-title">Location</h4>
-          <select class="form-control">
+          <select class="form-control" name="location">
           @foreach ($locations as $location)
-            <option>{{ $location->location }}</option>
+            <option value="{{ $location->location }}">{{ $location->location }}</option>
           @endforeach
           </select>
       </div>
@@ -80,6 +86,7 @@
       </div>
       <!-- button end--> 
     </div>
+    </form>
     <!-- Side Bar end --> 
   </div>
 
@@ -165,26 +172,6 @@
     
     {{ $vehicles->links() }}
 
-    <!-- <div class="pagiWrap">
-      <div class="row">
-        <div class="col-md-4 col-sm-4">
-          <div class="showreslt">Showing 1-10</div>
-        </div>
-        <div class="col-md-8 col-sm-8 text-right">
-          <ul class="pagination">
-            <li class="active"><a href="#.">1</a></li>
-            <li><a href="#.">2</a></li>
-            <li><a href="#.">3</a></li>
-            <li><a href="#.">4</a></li>
-            <li><a href="#.">5</a></li>
-            <li><a href="#.">6</a></li>
-            <li><a href="#.">7</a></li>
-            <li><a href="#.">8</a></li>
-          </ul>
-        </div>
-      </div>
-    </div> -->
-    <!-- Pagination end --> 
   </div>
 </div>
 </div>
