@@ -22,13 +22,15 @@ Route::get('/used-car', function () {
     return view('used');
 });
 
-Route::get('/details', function () {
-    return view('details');
-});
 
-Route::get('/my-ads', function () {
-    return view('myads');
-});
+Route::get('/details{id}', function($id){
+    $single = App\Vehicle::where('id', $id)->first();
+
+    return view('details')->with('vehicle', $single);
+})->name('details');
+
+
+Route::get('/my-ads',  'AdController@myAds');
 
 Route::get('/new-car', function () {
     return view('new');

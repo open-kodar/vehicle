@@ -44,92 +44,87 @@
               
               <div class="col-md-6">
                 <div class="formrow">
-                  <select class="form-control" name="indus" required>
-                    <option>Car type</option>
-                    <option>New</option>
-                    <option>Used</option>
+                  <select class="form-control" name="condition" required>
+                    <option value="1">New</option>
+                    <option value="0">Used</option>
+                  </select>
+                </div>
+              </div>
+              
+              @php
+                $types = \App\CarType::all();
+              @endphp
+              <div class="col-md-6">
+                <div class="formrow">
+                  <select class="form-control" name="type" required>
+                    <option>Select vehicle type</option>
+                    @foreach ($types as $type)
+                    <option value="{{ $type->id }}">{{ $type->name }}</option>
+                    @endforeach
                   </select>
                 </div>
               </div>
               
               <div class="col-md-6">
                 <div class="formrow">
-                  <select class="form-control" name="msalary" required>
-                    <option>Select Main Catgory</option>
-                    <option>Cars</option>
-                    <option>Motocycle</option>
-                    <option>Truck</option>
-                  </select>
-                </div>
-              </div>
-              
-              <div class="col-md-4">
-                <div class="formrow">
-                  <select class="form-control" name="msalary">
-                    <option>Select Mdel</option>
-                    <option>2017</option>
-                    <option>2016</option>
-                    <option>2015</option>
-                    <option>2014</option>
-                    <option>2013</option>
-                  </select>
+                  <input type="text" name="model" class="form-control" placeholder="Vehicle Model" required>
                 </div>
               </div>
              
               
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <div class="formrow">
-                  <input type="text" placeholder="KM Running" class="form-control" required>
+                  <input type="number" name="running" placeholder="KM Running" class="form-control" required>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="formrow">
-                  <select class="form-control" name="msalary">
-                    <option>Transmission</option>
-                    <option>Automatic</option>
-                    <option>Manual</option>
+                  <select class="form-control" name="transmission">
+                    <option value="Transmission">Transmission</option>
+                    <option value="Automatic">Automatic</option>
+                    <option value="Manual">Manual</option>
                   </select>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="formrow">
                   <select class="form-control" name="color">
-                    <option>Color</option>
-                    <option>White</option>
-                    <option>Black</option>
-                    <option>Red</option>
-                    <option>Blue</option>
-                    <option>Sliver</option>
+                    <option value="Color">Color</option>
+                    <option value="White">White</option>
+                    <option value="Black">Black</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Silver">Silver</option>
                   </select>
                 </div>
               </div>
               
               <div class="col-md-4">
                 <div class="formrow">
-                  <input type="text" placeholder="Engine Capacity" class="form-control" required>
+                  <input type="number" name="engine_cc" placeholder="Engine CC" class="form-control" required>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="formrow">
-                  <input type="text" placeholder="Millage" class="form-control">
+                  <input type="number" name="milage" placeholder="Millage" class="form-control">
                 </div>
               </div>
              
               <div class="col-md-4">
                 <div class="formrow">
-                  <input type="text" placeholder="Contact no" class="form-control" required>
+                  <input type="text" name="contact" placeholder="Contact no" class="form-control" required>
                 </div>
               </div>
 
               <div class="col-md-4">
                 <div class="formrow">
-                  <input type="text" name="price" class="form-control" placeholder="Ad Price">
+                  <input type="number" name="price" class="form-control" placeholder="Ad Price">
                 </div>
               </div>
 
               <div class="col-md-4">
                 <div class="formrow">
-                  <input type="text" placeholder="Location" class="form-control" required>
+                  <input type="text" name="location" placeholder="Location" class="form-control" required>
                 </div>
               </div>
               
@@ -152,7 +147,7 @@
              
               <div class="col-md-12">
                 <div class="formrow">
-                  <textarea class="form-control" name="jobdetail" placeholder="Seller Comments"></textarea>
+                  <textarea class="form-control" name="desc" placeholder="Description"></textarea>
                 </div>
               </div>
             </div>
