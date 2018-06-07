@@ -24,7 +24,7 @@ class CreateVehiclesTable extends Migration
             $table->integer('running')->default(0);
             $table->string('location');
             $table->integer('price')->default(0);
-            $table->string('description');
+            $table->text('description');
             $table->string('contact');
             $table->boolean('sale_status')->default(0);
             

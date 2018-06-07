@@ -41,6 +41,15 @@ class AdController extends Controller
         return view('details');
     }
 
+
+    public function sold($id)
+    {   
+        Vehicle::where('id', $id)->update(array('sale_status' => 1));
+        // $single = Vehicle::where('sale_status', $id);
+
+        return redirect('/my-ads')->with('status', 'Status updated');
+    }
+
     public function postAd(Request $request)
     {   
         // dd($request);

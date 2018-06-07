@@ -20,6 +20,13 @@
 </div>
 <!-- Page Title End -->
 
+@if (session('status'))
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
+@endif
+
+
 @php
   $vehicles = \App\Vehicle::where('user_id', Auth::id())->paginate(10);
 @endphp
@@ -54,8 +61,8 @@
                 </div>
                 <div class="col-md-4 col-sm-5 text-right">
                   <div class="adprice">BDT {{ $vehicle->price }}</div>
-                  <div class="listbtn"><a href="{{ url('/details') }}">View Details <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></div>
-                  <div class="listbtn"><a href="{{ url('/details') }}">Sold <i class="fa fa-check-circle" aria-hidden="true"></i></a></div>
+                  <div class="listbtn"><a href="{{ route('details', ['id' => $vehicle->id ]) }}">View Details <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></div>
+                  <div class="listbtn" ><a href="{{ route('sold', ['id' => $vehicle->id ]) }}" class="btn @if($vehicle->sale_status ) disabled @endif" >Sold <i class="fa fa-check-circle" aria-hidden="true"></i></a></div>
                
                 </div>
               </div>

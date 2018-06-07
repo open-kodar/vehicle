@@ -77,6 +77,12 @@
         <div class="jbside">
           <h3>About This Car</h3>
           <ul class="jbdetail">
+
+            <li class="row">
+              <div class="col-md-6 col-xs-6">Vehicle Condition</div>
+              <div class="col-md-6 col-xs-6"><span>@if($vehicle->condition) New @else Used @endif </span></div>
+            </li>
+
             <li class="row">
               <div class="col-md-6 col-xs-6">Registered City</div>
               <div class="col-md-6 col-xs-6"><span>{{ $vehicle->location }}</span></div>

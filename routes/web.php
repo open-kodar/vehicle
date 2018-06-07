@@ -29,6 +29,8 @@ Route::get('/details{id}', function($id){
     return view('details')->with('vehicle', $single);
 })->name('details');
 
+Route::get('/sold{id}', 'AdController@sold' )->name('sold');
+
 
 Route::get('/my-ads',  'AdController@myAds');
 

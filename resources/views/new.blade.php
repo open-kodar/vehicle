@@ -72,7 +72,7 @@
 </div>
 
 @php
-  $vehicles = \App\Vehicle::where('condition', 1)->paginate(10);
+  $vehicles = \App\Vehicle::where('condition', 1)->where('sale_status', 0)->paginate(10);
 @endphp
 
   <div class="col-md-9 col-sm-7"> 
